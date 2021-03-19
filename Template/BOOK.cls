@@ -83,6 +83,7 @@
     
     \noindent
     \vspace{1mm}
+    \hspace{2mm}
 }
 
 
@@ -192,7 +193,7 @@
 \newcommand{\NOTE}[2][-1cm]{
     \p
     {\hspace{#1}{\includegraphics[width=5mm]{Template/images/notemark.png}}}
-    \hspace{1mm} #2
+    \hspace{2mm} #2
 }
 
 % theorem styling
