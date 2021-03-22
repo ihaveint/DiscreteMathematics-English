@@ -306,3 +306,8 @@ TSWLatexianTemp*
 .history
 
 # End of https://www.toptal.com/developers/gitignore/api/latex,visualstudiocode
+#
+#
+#
+
+.DS_Store

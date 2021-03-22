@@ -1,0 +1,95 @@
+\SECTION{Sequences}
+
+\SUBSECTION{Definitions}
+\begin{DEFINITION}
+    \p
+    \FOCUSEDON{Sequence:}
+    A function with domain $\mathbb{W}$ or $\mathbb{N}$ and none-empty range is called a sequence.
+  Elements that appear on the range are called {\color{red}terms} of the sequence. We represent the i'th term by $a_i = f(i)$, which simply means the image of integer $i$ is $a_i$.
+\end{DEFINITION}
+
+\p
+We can have repetitions in a sequence and order matters, so a sequence with $a_1 = 1 , a_2 = 2$ is not the same as a sequence with $a_1 = 2, a_2 = 1$ 
+
+\begin{DEFINITION}
+    \begin{enumerate}
+        \item     
+            Sequence $a_n$ is called {\color{red}strictly increasing} if for every $n \in \mathbb{N}$ the below property holds:
+            \begin{align*}
+                a_{n + 1} > a_n
+            \end{align*}
+        \item 
+            Sequence $a_n$ is called {\color{red}increasing} if for every $n \in \mathbb{N}$ the below property holds:
+            \begin{align*}
+                a_{n + 1} \geq a_n
+            \end{align*}
+        \item
+            Sequence $a_n$ is called {\color{red}strictly decreasing} if for every $n \in \mathbb{N}$ the below property holds:
+            \begin{align*}
+                a_{n + 1} < a_n
+            \end{align*}
+        \item
+            Sequence $a_n$ is called {\color{red}decreasing} if for every $n \in \mathbb{N}$ the below property holds:
+            \begin{align*}
+                a_{n + 1} \leq a_n
+            \end{align*}
+        \item
+            All of these mentioned sequences are called {\color{red} monotonic} sequences.
+        \item
+            A sequence is called {\color{red} bounded above} if there exists an integer $M$ such that for every $n \in \mathbb{N}$ we have:
+            \begin{align*}
+                a_n \leq M
+            \end{align*}
+        \item
+            A sequence is called {\color{red} bounded below} if there exists an integer $M$ such that for every $n \in \mathbb{N}$ we have:
+            \begin{align*}
+                a_n \geq M
+            \end{align*}
+        \item
+            A sequence is called {\color{red} boundeded} if it's both bounded below and bounded above.
+        \item A sequence that's not bounded is called an {\color{red} unbounded} sequence.
+    \end{enumerate}
+\end{DEFINITION}
+
+\begin{DEFINITION}
+    \p
+    \FOCUSEDON{Subsequence:}
+    A sequence which some elements are removed from is called a subsequence [of that sequence] 
+\end{DEFINITION}
+
+\p
+We can see that $\{A,B,F\}$ is a subsequence of $\{A,B,C,D,E,F\}$, but not a subsequence of $\{B,A,C,D,E,F\}$ (since order is important).
+
+\NOTE{Since subsequences are sequences themselves, it's no surprise that a subsequence can be increasing, decreasing, monotonic, etc. \\ \\}
+
+
+\begin{EXTRA}{Puzzle}
+    Suppose we have a sequence $A = \{a_1, ..., a_n\}$ and our goal is to find an increasing subsequence of $A$ which is as big as possible. 
+    
+    \begin{itemize}
+    \item 
+        One possible way to solve this problem is by simply writing every possible subsequence of A. Then we remove those subsequences which aren't increasing. Finally we find the subsequence with the biggest size. This approach is called a \textbf{bruteforce} algorithm
+    \item
+        We can use a greedy approach instead. Take the first element of $A$ (which is $a_1$), Then find the least possible $i > 1$ such that $a_i \geq a_1$. After that, find the least $j > i$ such that $a_j \geq a_i$. Continue this algorithm to the point we can't add any more element (in each step if the least possible term is the $i$'th term, we append $a_i$ to our answer). Unfortunately, this algorithm doesn't work \Sadey[][green] (can you say why?)
+    \end{itemize}
+\end{EXTRA}
+
+
+\NOTE{The above question is called the Longest Increasing Subsequence (LIS for short). You can take a look at
+\href{https://en.wikipedia.org/wiki/Longest_increasing_subsequence}{wikipedia} for more information if you are interested.}
+
+
+
+\SUBSECTION{Some Specific Sequences}
+\SUBSECTION{Recursive Sequences}
+\SUBSECTION{Generating Functions}
+
+
+% \subfile{./example1.tex}
+
+
+% \begin{THEOREM}
+%     \p
+%     Also something like:
+%     $$\left \lceil \frac{N}{k} \right \rceil$$
+% \end{THEOREM}

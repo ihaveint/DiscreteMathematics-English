@@ -9,6 +9,19 @@
 
 
 \LoadClassWithOptions{article}
+\usepackage{tikzsymbols}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
 \usepackage[
     centering,
     includehead=true,
